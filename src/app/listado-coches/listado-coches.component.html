@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+            <input type="text" class="form-control mb-4" placeholder="Buscar ..." [(ngModel)]="filtro">
+        </div>
+        <div class="col-4 ">
+            <select class="form-select" [(ngModel)]="filtroTipo" (ngModelChange)="filtraTipo()">
+                <option value="0">Todos</option>
+                <option *ngFor="let tipoCoche of tipoCoches" [value]="tipoCoche.id">{{tipoCoche.tipo}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-3" *ngFor="let coche of cochesFiltrados | filtroCoches:filtro">
+            <div class="card">
+                <img src="/assets/{{coche.modelo}}.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{coche.modelo}}</h5>
+                    <p class="card-text">El tipo de combustible de este coche es {{coche.combustible}} y su potencia
+                        es de
+                        {{coche.potencia}} C.V y su precio es :
+                        {{coche.precio}} €
+                    </p>
+                    <p class="card-text"><button class="btn btn-warning" routerLink="/contactar"><i
+                                class="bi bi-car-front"></i> Pide una prueba</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

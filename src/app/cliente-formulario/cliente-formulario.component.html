@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-warning"> Le llamamos para citarle una cita </button>
+    </div>
+    <form (ngSubmit)="enviarFormulario()">
+        <div class="mb-3">
+            <label for="nombre" class="form-label blanco">Nombre</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]="cliente.nombre">
+        </div>
+        <div class="mb-3">
+            <label for="apellidos" class="form-label blanco">Apellidos</label>
+            <input type="text" name="apellidos" class="form-control" id="apellidos" [(ngModel)]="cliente.apellidos">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label blanco">Email</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                [(ngModel)]="cliente.email">
+        </div>
+        <div class="mb-3">
+            <label for="tel" class="form-label blanco">Numero de teléfono</label>
+            <input type="text" name="tel" class="form-control" id="tel" [(ngModel)]="cliente.tel">
+            <div id="emailHelp" class="form-text" class="blanco">Tus datos personales estarán protegidos según la
+                ley</div>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1 blanco">No soy robot VALIDATION</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <form (ngSubmit)="postCoche()">
+        <p class="blanco">Elija el tipo de coche </p>
+        <select class="form-control form-control-m" name="tipocoche" [(ngModel)]="coche.tipoCoche">
+            <option *ngFor="let tipocoche of tiposcoche" [value]="tipocoche.id">{{tipocoche.tipo}}</option>
+        </select>
+        <label for="modelo" class="col-sm-2 col-form-label blanco">Modelo</label>
+        <input type="text" name="modelo" class="form-control mb-2" id="modelo" placeholder="Modelo"
+            [(ngModel)]="coche.modelo">
+        <label for="combustible" class="col-sm-2 col-form-label blanco">Combustible</label>
+        <input type="text" name="combustible" class="form-control mb-2" id="combustible" placeholder="Combustible"
+            [(ngModel)]="coche.combustible">
+        <label for="potencia" class="col-sm-2 col-form-label blanco">Potencia</label>
+        <input type="text" name="potencia" class="form-control mb-2" id="potencia" placeholder="Potencia"
+            [(ngModel)]="coche.potencia">
+        <label for="precio" class="col-sm-2 col-form-label blanco">Precio</label>
+        <input type="text" name="precio" class="form-control mb-2" id="precio" placeholder="Precio"
+            [(ngModel)]="coche.precio">
+        <button type="submit" class="btn btn-info mb-10 blanco">Añadir</button>
+    </form>
+</div>

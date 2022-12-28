@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="d-grid gap-2">
+    <a class="btn btn-success" type="button">Los Coches</a>
+  </div>
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Modelo</th>
+        <th scope="col">Combustible</th>
+        <th scope="col">Potencia</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coche of coches">
+        <th scope="row">{{coche.modelo}}</th>
+        <td>{{coche.combustible}}</td>
+        <td>{{coche.potencia}} CV</td>
+        <td>{{coche.precio}} €</td>
+        <td><button class="btn btn-danger" (click)="deleteCoche(coche)"><i class="bi bi-trash"></i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

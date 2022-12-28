@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <form class="container-fluid justify-content-start">
+      <a routerLink="/listadocoches" class="btn btn-info" role="button" type="button" style="margin: 25px">Nuestros
+        vehículos</a>
+      <a routerLink="/contactar" class="btn btn-info" role="button" type="button" style="margin: 25px">Contactar con
+        nosotros</a>
+      <a routerLink="/sobre" class="btn btn-info" role="button" type="button" style="margin: 25px">Sobre Nosotros</a>
+      <a routerLink="/login" class="btn btn-info" role="button" type="button" style="margin: 25px">Admin login</a>
+      <a routerLink="/listadocoches" class="btn btn-danger " title="Salir" *ngIf="login" (click)="logout()"><i
+          class="bi bi-box-arrow-in-right "></i></a>
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+</div>

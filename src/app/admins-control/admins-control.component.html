@@ -1,0 +1,44 @@
+<div class="container">
+  <h2 class="blanco">Tabla de control general</h2>
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-coches-tab" data-bs-toggle="pill" data-bs-target="#pills-coches"
+        type="button" role="tab" aria-controls="pills-coches" aria-selected="true">Los Coches</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-cocheadd-tab" data-bs-toggle="pill" data-bs-target="#pills-cocheadd"
+        type="button" role="tab" aria-controls="pills-cocheadd" aria-selected="false">Agregar un coche</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-clientes-tab" data-bs-toggle="pill" data-bs-target="#pills-clientes"
+        type="button" role="tab" aria-controls="pills-clientes" aria-selected="false">Clientes para citar</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-admins-tab" data-bs-toggle="pill" data-bs-target="#pills-admins" type="button"
+        role="tab" aria-controls="pills-admins" aria-selected="false">Los admins</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-agregaradmin-tab" data-bs-toggle="pill" data-bs-target="#pills-agregaradmin"
+        type="button" role="tab" aria-controls="pills-agregaradmin" aria-selected="false">Añadir un admin</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-coches" role="tabpanel" aria-labelledby="pills-coches-tab"
+      tabindex="0">
+      <app-coches-admin></app-coches-admin>
+    </div>
+    <div class="tab-pane fade" id="pills-cocheadd" role="tabpanel" aria-labelledby="pills-cocheadd-tab" tabindex="0">
+      <app-formulario-coche></app-formulario-coche>
+    </div>
+    <div class="tab-pane fade" id="pills-clientes" role="tabpanel" aria-labelledby="pills-clientes-tab" tabindex="0">
+      <app-formularios></app-formularios>
+    </div>
+    <div class="tab-pane fade" id="pills-admins" role="tabpanel" aria-labelledby="pills-admins-tab" tabindex="0">
+      <app-lista-admins></app-lista-admins>
+    </div>
+    <div class="tab-pane fade" id="pills-agregaradmin" role="tabpanel" aria-labelledby="pills-agregaradmin-tab"
+      tabindex="0">
+      <app-anyadir-admin></app-anyadir-admin>
+    </div>
+  </div>
+</div>

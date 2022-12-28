@@ -1,0 +1,17 @@
+<div class="container">
+    <form (ngSubmit)="postAdmin()">
+        <div class="form-group">
+            <label for="email" class="blanco">Email</label>
+            <input type="text" name="email" class="form-control" id="name" placeholder="Introduzca el email"
+                [(ngModel)]="admin.email">
+        </div>
+        <div class="form-group">
+            <label for="password" class="blanco">La Contraseña</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Another input"
+                [(ngModel)]="admin.password">
+        </div>
+        <div>
+            <button class="btn btn-info" type="submit" class="btn btn-info mb-10">Añadir</button>
+        </div>
+    </form>
+</div>

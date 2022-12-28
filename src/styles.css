@@ -1,0 +1,14 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+    background-image: url(/assets/oldblack.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100%;
+}
+
+.blanco {
+    color: #ffffff
+}
